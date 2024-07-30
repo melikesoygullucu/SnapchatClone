@@ -13,6 +13,7 @@
 		4D7204002C57DBD400E72DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7203FE2C57DBD400E72DB0 /* Main.storyboard */; };
 		4D7204022C57DBD600E72DB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7204012C57DBD600E72DB0 /* Assets.xcassets */; };
 		4D7204052C57DBD600E72DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7204032C57DBD600E72DB0 /* LaunchScreen.storyboard */; };
+		4D72040D2C58CB9400E72DB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D72040C2C58CB9400E72DB0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D7204012C57DBD600E72DB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D7204042C57DBD600E72DB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D7204062C57DBD600E72DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D72040C2C58CB9400E72DB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4D7204012C57DBD600E72DB0 /* Assets.xcassets */,
 				4D7204032C57DBD600E72DB0 /* LaunchScreen.storyboard */,
 				4D7204062C57DBD600E72DB0 /* Info.plist */,
+				4D72040C2C58CB9400E72DB0 /* GoogleService-Info.plist */,
 			);
 			path = SnapchatClone;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7204052C57DBD600E72DB0 /* LaunchScreen.storyboard in Resources */,
+				4D72040D2C58CB9400E72DB0 /* GoogleService-Info.plist in Resources */,
 				4D7204022C57DBD600E72DB0 /* Assets.xcassets in Resources */,
 				4D7204002C57DBD400E72DB0 /* Main.storyboard in Resources */,
 			);
