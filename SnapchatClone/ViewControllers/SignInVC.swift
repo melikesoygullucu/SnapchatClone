@@ -24,6 +24,18 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: Any) {
+        if emailTextField.text != "" && usernameTextField.text != "" && passwordTextField.text != "" {
+            
+        } else {
+            self.makeAlert(title: "Error", message: "Please fill in all the blanks!")
+        }
+    }
+    
+    func makeAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
     }
     
 }
