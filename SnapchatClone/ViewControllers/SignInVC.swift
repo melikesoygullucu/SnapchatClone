@@ -23,6 +23,20 @@ class SignInVC: UIViewController {
     }
 
     @IBAction func signInButton(_ sender: Any) {
+        if emailTextField.text != "" && usernameTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { auth, error in
+                if error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error!")
+                } else {
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                }
+            }
+            
+            
+        } else {
+            self.makeAlert(title: "Error", message: "Please fill in all the blanks!")
+        }
+        
     }
     
     @IBAction func signUpButton(_ sender: Any) {
