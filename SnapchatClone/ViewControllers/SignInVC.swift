@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class SignInVC: UIViewController {
 
@@ -25,7 +27,24 @@ class SignInVC: UIViewController {
     
     @IBAction func signUpButton(_ sender: Any) {
         if emailTextField.text != "" && usernameTextField.text != "" && passwordTextField.text != "" {
-            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { auth, error in
+                if error != nil {
+                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error!")
+                } else {
+                    let firestore = Firestore.firestore()
+                    
+                    let userDictionary = ["email" : self.emailTextField.text!, "username" : self.usernameTextField.text!] as [String : Any]
+                    
+                    firestore.collection("UserInfo").addDocument(data: userDictionary) { (error) in
+                        if error != nil{
+                            
+                        }
+                    }
+                    
+                    self.performSegue(withIdentifier: "toFeedVC", sender: nil)
+                    
+                }
+            }
         } else {
             self.makeAlert(title: "Error", message: "Please fill in all the blanks!")
         }
