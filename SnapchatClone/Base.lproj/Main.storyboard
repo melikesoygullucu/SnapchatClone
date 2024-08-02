@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snapchat Clone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-yb-9Jp">
-                                <rect key="frame" x="79" y="74" width="235" height="34"/>
+                                <rect key="frame" x="79" y="76" width="235" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="51w-ZC-6lH"/>
                                 </constraints>
@@ -75,10 +75,10 @@
                             <constraint firstItem="BY6-yb-9Jp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="Knh-5u-um9"/>
                             <constraint firstItem="KVP-Cg-HAe" firstAttribute="leading" secondItem="3PT-tA-1Mi" secondAttribute="leading" id="Npv-1Q-Ggh"/>
                             <constraint firstItem="KVP-Cg-HAe" firstAttribute="top" secondItem="nNJ-iG-KA2" secondAttribute="bottom" constant="21" id="Ov8-4O-Ryn"/>
-                            <constraint firstItem="nNJ-iG-KA2" firstAttribute="top" secondItem="BY6-yb-9Jp" secondAttribute="bottom" constant="30" id="ebZ-R0-gCO"/>
+                            <constraint firstItem="nNJ-iG-KA2" firstAttribute="top" secondItem="BY6-yb-9Jp" secondAttribute="bottom" constant="28" id="ebZ-R0-gCO"/>
                             <constraint firstItem="nNJ-iG-KA2" firstAttribute="trailing" secondItem="KVP-Cg-HAe" secondAttribute="trailing" id="hH7-28-fRM"/>
                             <constraint firstItem="3PT-tA-1Mi" firstAttribute="leading" secondItem="Xza-7i-g2i" secondAttribute="leading" id="hMi-0c-1GA"/>
-                            <constraint firstItem="BY6-yb-9Jp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="njV-Ta-T44"/>
+                            <constraint firstItem="BY6-yb-9Jp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="njV-Ta-T44"/>
                             <constraint firstItem="Xza-7i-g2i" firstAttribute="baseline" secondItem="AuU-RZ-ewE" secondAttribute="baseline" id="yuT-9o-BwI"/>
                         </constraints>
                     </view>
@@ -159,6 +159,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="dWS-PC-3Ae"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="8uK-o8-vYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9V-fb-cCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +235,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="cOW-R6-Oty">
             <objects>
-                <tabBarController id="e02-GY-bMO" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="e02-GY-bMO" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5D-Jg-wXZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
