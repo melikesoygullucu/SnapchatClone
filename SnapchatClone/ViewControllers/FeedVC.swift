@@ -13,8 +13,14 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getUserInfo()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func getUserInfo() {
+        
     }
     
 }
