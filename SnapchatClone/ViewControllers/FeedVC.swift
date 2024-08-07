@@ -20,9 +20,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getUserInfo()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        getSnapsFromFirebase()
 
         // Do any additional setup after loading the view.
     }
+    
+    func getSnapsFromFirebase() {
+        firestoreDatabase.collection("Snaps").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
+            if error != nil {
+                self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error!")
+            } else {
+                if snapshot?.isEmpty != false && snapshot != nil {
+                    for document in snapshot!.documents {
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     
     func getUserInfo() {
         firestoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser?.email!).getDocuments { snapshot, error in

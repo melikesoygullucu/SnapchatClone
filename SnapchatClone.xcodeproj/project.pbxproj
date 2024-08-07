@@ -20,6 +20,7 @@
 		4D7204112C58DA2600E72DB0 /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7204102C58DA2600E72DB0 /* UploadVC.swift */; };
 		4D7204132C58DAFE00E72DB0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7204122C58DAFE00E72DB0 /* SettingsVC.swift */; };
 		4DB386B52C62602600607005 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB386B42C62602600607005 /* FeedCell.swift */; };
+		4DB386B72C6363B100607005 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB386B62C6363B100607005 /* Snap.swift */; };
 		9ABCCEF5C0B9D2031B97811F /* Pods_SnapchatClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B698E9A1BFF39C72616B7B4 /* Pods_SnapchatClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		4D7204102C58DA2600E72DB0 /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		4D7204122C58DAFE00E72DB0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		4DB386B42C62602600607005 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		4DB386B62C6363B100607005 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		54C367CA6D3C4C2C8D0E0BAC /* Pods-SnapchatClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapchatClone.release.xcconfig"; path = "Target Support Files/Pods-SnapchatClone/Pods-SnapchatClone.release.xcconfig"; sourceTree = "<group>"; };
 		7B698E9A1BFF39C72616B7B4 /* Pods_SnapchatClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0740B92C5FC0770019286B /* UserModel.swift */,
+				4DB386B62C6363B100607005 /* Snap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D72040F2C58DA1C00E72DB0 /* FeedVC.swift in Sources */,
+				4DB386B72C6363B100607005 /* Snap.swift in Sources */,
 				4D7203FD2C57DBD400E72DB0 /* SignInVC.swift in Sources */,
 				4D0740BA2C5FC0770019286B /* UserModel.swift in Sources */,
 				4D7203F92C57DBD400E72DB0 /* AppDelegate.swift in Sources */,
