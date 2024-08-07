@@ -13,6 +13,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     let firestoreDatabase = Firestore.firestore()
+    var snapArray = [Snap]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,26 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error!")
             } else {
                 if snapshot?.isEmpty != false && snapshot != nil {
+                    
+                    self.snapArray.removeAll(keepingCapacity: false)
+                           
+                    
                     for document in snapshot!.documents {
                         
+                        let documentID = document.documentID
+                        
+                        if let username = document.get("owner") as? String {
+                            if let imageURL = document.get("imageURL") as? [String] {
+                                if let date = document.get("date") as? Timestamp {
+                                    
+                                    
+                                    
+                                    
+                                    let snap = Snap(username: username, imageURLArray: imageURL, date: date.dateValue())
+                                    self.snapArray.append(snap)
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -66,12 +85,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return snapArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
-        cell.feedUserNameLabel.text = "test"
+        cell.feedUserNameLabel.text = snapArray[indexPath.row].username
         return cell
     }
     
