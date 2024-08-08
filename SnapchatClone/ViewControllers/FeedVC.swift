@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import SDWebImage
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -18,10 +19,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getUserInfo()
         tableView.delegate = self
         tableView.dataSource = self
         
+        getUserInfo()
         getSnapsFromFirebase()
 
         // Do any additional setup after loading the view.
@@ -32,7 +33,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if error != nil {
                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error!")
             } else {
-                if snapshot?.isEmpty != false && snapshot != nil {
+                if snapshot?.isEmpty == false && snapshot != nil {
                     
                     self.snapArray.removeAll(keepingCapacity: false)
                            
@@ -60,14 +61,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             }
                         }
                     }
+                    self.tableView.reloadData()
                 }
+               
             }
+            
         }
     }
     
     
     func getUserInfo() {
-        firestoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser?.email!).getDocuments { snapshot, error in
+        firestoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).getDocuments { snapshot, error in
             if error != nil {
                 self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
             } else {
@@ -97,6 +101,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
         cell.feedUserNameLabel.text = snapArray[indexPath.row].username
+        cell.feedImageView.sd_setImage(with: URL(string: snapArray[indexPath.row].imageURLArray[0]))
         return cell
     }
     
