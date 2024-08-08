@@ -45,7 +45,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             if let imageURL = document.get("imageURL") as? [String] {
                                 if let date = document.get("date") as? Timestamp {
                                     
-                                    
+                                    if let difference = Calendar.current.dateComponents([.hour], from: date.dateValue(), to: Date()).hour {
+                                        if difference >= 24 {
+                                            self.firestoreDatabase.collection("Snaps").document(documentID).delete { error in
+                                               
+                                            }
+                                        }
+                                    }
                                     
                                     
                                     let snap = Snap(username: username, imageURLArray: imageURL, date: date.dateValue())
