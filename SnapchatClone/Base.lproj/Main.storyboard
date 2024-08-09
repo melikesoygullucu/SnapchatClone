@@ -249,7 +249,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-Ji-s2A">
-                                <rect key="frame" x="96" y="84" width="228" height="51"/>
+                                <rect key="frame" x="82" y="102" width="228" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -258,15 +258,15 @@
                         <viewLayoutGuide key="safeArea" id="hrM-Ln-3vi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="trailing" secondItem="O3d-Ji-s2A" secondAttribute="trailing" constant="69" id="5E2-Yh-tfT"/>
-                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="bottom" secondItem="O3d-Ji-s2A" secondAttribute="bottom" constant="707" id="LXk-6Y-xOV"/>
-                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="top" secondItem="hrM-Ln-3vi" secondAttribute="top" constant="84" id="ZZi-m0-ELj"/>
-                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="leading" secondItem="hrM-Ln-3vi" secondAttribute="leading" constant="96" id="lF0-Op-sge"/>
+                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="trailing" secondItem="O3d-Ji-s2A" secondAttribute="trailing" constant="83" id="5E2-Yh-tfT"/>
+                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="bottom" secondItem="O3d-Ji-s2A" secondAttribute="bottom" constant="689" id="LXk-6Y-xOV"/>
+                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="top" secondItem="hrM-Ln-3vi" secondAttribute="top" constant="102" id="ZZi-m0-ELj"/>
+                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="leading" secondItem="hrM-Ln-3vi" secondAttribute="leading" constant="82" id="lF0-Op-sge"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uLJ-fQ-Xm0"/>
                     <connections>
-                        <outlet property="timeLabel" destination="O3d-Ji-s2A" id="bC0-tM-a0n"/>
+                        <outlet property="timeLabel" destination="O3d-Ji-s2A" id="HHo-vd-yns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tt3-sl-WQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

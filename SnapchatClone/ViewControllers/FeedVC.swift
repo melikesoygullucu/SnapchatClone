@@ -15,6 +15,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     let firestoreDatabase = Firestore.firestore()
     var snapArray = [Snap]()
+    var chosenSnap : Snap?
+    var timeLeft : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                                
                                             }
                                         }
+                                        
+                                        self.timeLeft = 24 - difference
                                     }
                                     
                                     
@@ -105,4 +109,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSnapVC" {
+            let destinationVC = segue.destination as! SnapVC
+            destinationVC.selectedSnap = chosenSnap
+            destinationVC.remainingTime = self.timeLeft
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenSnap = self.snapArray[indexPath.row]
+        performSegue(withIdentifier: "toSnapVC", sender: nil)
+    }
 }
