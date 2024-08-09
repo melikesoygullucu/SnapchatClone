@@ -248,7 +248,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-Ji-s2A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time Left :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-Ji-s2A">
                                 <rect key="frame" x="82" y="102" width="228" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -258,10 +258,10 @@
                         <viewLayoutGuide key="safeArea" id="hrM-Ln-3vi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="trailing" secondItem="O3d-Ji-s2A" secondAttribute="trailing" constant="83" id="5E2-Yh-tfT"/>
-                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="bottom" secondItem="O3d-Ji-s2A" secondAttribute="bottom" constant="689" id="LXk-6Y-xOV"/>
-                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="top" secondItem="hrM-Ln-3vi" secondAttribute="top" constant="102" id="ZZi-m0-ELj"/>
-                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="leading" secondItem="hrM-Ln-3vi" secondAttribute="leading" constant="82" id="lF0-Op-sge"/>
+                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="leading" secondItem="hrM-Ln-3vi" secondAttribute="leading" constant="82" id="CCm-pP-WKp"/>
+                            <constraint firstItem="hrM-Ln-3vi" firstAttribute="bottom" secondItem="O3d-Ji-s2A" secondAttribute="bottom" constant="689" id="N2S-Bg-upe"/>
+                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="top" secondItem="hrM-Ln-3vi" secondAttribute="top" constant="102" id="SBf-6O-ODm"/>
+                            <constraint firstItem="O3d-Ji-s2A" firstAttribute="centerX" secondItem="T8v-o5-r5Y" secondAttribute="centerX" id="WZI-z1-fir"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uLJ-fQ-Xm0"/>

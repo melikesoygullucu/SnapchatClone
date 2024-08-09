@@ -34,6 +34,8 @@ class SnapVC: UIViewController {
             imageSlideShow.setImageInputs(inputArray)
             self.view.addSubview(imageSlideShow)
             
+            self.view.bringSubviewToFront(timeLabel)
+            
         }
 
     }
