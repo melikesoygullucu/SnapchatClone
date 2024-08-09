@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 class SnapVC: UIViewController {
 
@@ -13,6 +14,7 @@ class SnapVC: UIViewController {
     
     var selectedSnap : Snap?
     var remainingTime : Int?
+    var inputArray = [KingfisherSource]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,20 @@ class SnapVC: UIViewController {
      
             timeLabel.text = "Time Left: \(remainingTime) "
         
-        // Do any additional setup after loading the view.
+        if let snap = selectedSnap {
+            for imageURL in snap.imageURLArray {
+                inputArray.append(KingfisherSource(urlString: imageURL)!)
+            }
+            
+            let imageSlideShow = ImageSlideshow(frame: CGRect(x: 10, y: 10, width: self.view.frame.width * 0.95, height: self.view.frame.height * 0.9))
+            
+            imageSlideShow.backgroundColor = .white
+            imageSlideShow.contentScaleMode = UIViewContentMode.scaleAspectFit
+            imageSlideShow.setImageInputs(inputArray)
+            self.view.addSubview(imageSlideShow)
+            
+        }
+
     }
 
 }
