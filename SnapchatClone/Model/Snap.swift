@@ -11,4 +11,5 @@ struct Snap {
     var username : String
     var imageURLArray : [String]
     var date : Date
+    var timeDifference : Int
 }
